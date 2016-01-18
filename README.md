@@ -114,37 +114,50 @@ We use `def` to do this.
     (def my-vector [1 2 3 4])
 
 Then, if we test this by typing: `my-vector`
-    `> [1 2 3 4]` 
+
+    > [1 2 3 4]
 
 What if we only want the **first element** of the vector?
-    `(first my-vector)`
-    `> 1` 
+    (first my-vector)
+    > 1 
     
 What if we want to **sum** the elements?  
-    `(reduce + my-vector)`
-    `> 10` 
+    (reduce + my-vector)
+    > 10 
 
 What if we want to see which elemets are **even?**
-    `(map even? my-vector)`
-    `> [false true false true]` 
+    (map even? my-vector)
+    > [false true false true]
 
 `map` applies a function to each element in a collection, and returns the results of the functions.
 
 What if we want to add one to each element?
-    `(map (partial + 1) my-vector)`
-    `> [2 3 4 5]` 
+    (map (partial + 1) my-vector)
+    > [2 3 4 5]
 
 Woah. Cool. A `partial` creates a function that has some of the arguments already applied, and is waiting for the remaining arguments.
 
 It's basically saying "We are going to add one and ..." And then it applies each element in the vector to the function.
 
-    "We are going to add 1 and **1**" >> 2
-    "We are going to add 1 and **2**" >> 3
-    "We are going to add 1 and **3**" >> 4
-    "We are going to add 1 and **4**" >> 5
+    "We are going to add 1 and ... **1**" >> 2
+    "We are going to add 1 and ... **2**" >> 3
+    "We are going to add 1 and ... **3**" >> 4
+    "We are going to add 1 and ... **4**" >> 5
     
   
 ####Example 4: Make your own functions
+
+What if we want to map over our collection and do something really cool? Like add two and then multiply by two.
+
+We can define our own function! We use `defn` to do this.
+
+Our funciton would look like this:
+    (defn my-special-function [element] (* 2 (+ 2 element)))
+
+And we could apply it this way:
+    
+    (map my-special-function my-vector)
+    
 
 ## License
 MIT
