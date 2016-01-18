@@ -1,4 +1,4 @@
-# steps-clojure
+# 10-steps-clojure
 
 A Clojure library designed to... teach beginners how to get started with Clojure! 
 
@@ -12,8 +12,11 @@ I find that the biggest hurdle in learning something new is getting stuck before
 
 Why learn Clojure?
 
-  * It's a LISP! Be the diamond in the rough of programmers.
-  * 
+  * It's a LISP! Be the diamond in the rough of programmers who understand the syntax.
+  * Smart people respect LISPs! [ this guy! ](http://www.paulgraham.com/avg.html) [ and this one! ](http://blog.bigml.com/2013/06/21/clojure-based-machine-learning/)
+  * Learn about functional programming concepts like `lazy-sequences` and `comp` (this is super cool if you're coming from ObjOriented like I did!)
+  * Learn about threading and asynchronous functions
+  
 
 #Web Resources
 
@@ -25,7 +28,7 @@ That should be enough to get you started.
 
 I also found that doing [ Project Euler problems ](https://projecteuler.net/archives) was very beneficial to getting comfortable in Clojure.
 
-Skip down to [Tips](#Tips)
+Skip down to [Tips](#tips)
 
 #Local Resource
 
