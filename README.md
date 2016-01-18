@@ -14,7 +14,7 @@ Why learn Clojure?
 
   * It's a LISP! Be the diamond in the rough of programmers who understand how these work.
   * Smart people respect LISPs! [like this guy](http://www.paulgraham.com/avg.html) [and this one](http://blog.bigml.com/2013/06/21/clojure-based-machine-learning/)
-  * Learn about functional programming concepts like `lazy-sequences` and `comp` (this is super cool if you're coming from ObjOriented like I did)
+  * Learn about functional programming concepts like `lazy-sequences`, `comp`, and `partial` (this is super cool if you're coming from ObjOriented like I did)
   * Learn about threading and asynchronous functions.
   * You can get a job in Clojure!
   * The ecosystem is filled with **really great tools**, and **very helpful people**. I am seriously amazed.
@@ -76,8 +76,54 @@ For VIM users, grab TPope's [fireplace](https://github.com/tpope/vim-fireplace).
 
 #Tips
 
+So now we have a pretty good way of editing Clojure. How else can I help you? Maybe a few code samples and explanations.
 
 
+####Example 1: Math
+Take the following code sample:
+
+    (+ 1 (* 2 (- 10 1)))
+
+We read this from the inside out. So step by step, this expression looks like...
+
+    (+ 1 (* 2 (- 10 1)))
+    (+ 1 (* 2 9))
+    (+ 1 18)
+    19
+
+Woohoo!
+
+####Example 2: Strings
+
+    (reverse (str "hello" "ok"))
+
+    `str` takes any number of arguments and combines them to become a string
+    You can guess what `reverse` does.
+
+    (reverse (str "hello" "ok"))
+    (reverse "hellook")
+    "koolleh"
+
+####Example 3: Variables
+
+    In clojure, we call an Array a **Vector**. And we don't need to use commas.
+    This is a vector of numbers `[1 2 3 4]`
+    If we want to reference this vector without retyping it, we can store it as a variable.
+    We use `def` to do this.
+
+    (def my-vector [1 2 3 4])
+
+    Then, if we test this by typing: `my-vector`
+    `> [1 2 3 4]` 
+
+    What if we only want the first element of the vector?
+    `(first my-vector)`
+    
+    What if we want to sum the elements?  
+    `(reduce + my-vector)`
+  
+
+####Example 4: Functions
 
 ## License
 MIT
