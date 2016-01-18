@@ -13,10 +13,10 @@ I find that the biggest hurdle in learning something new is getting stuck before
 Why learn Clojure?
 
   * It's a LISP! Be the diamond in the rough of programmers who understand how these work.
-  * Smart people respect LISPs! [ this guy! ](http://www.paulgraham.com/avg.html) [ and this one! ](http://blog.bigml.com/2013/06/21/clojure-based-machine-learning/)
-  * Learn about functional programming concepts like `lazy-sequences` and `comp` (this is super cool if you're coming from ObjOriented like I did!)
+  * Smart people respect LISPs! [like this guy](http://www.paulgraham.com/avg.html) [and this one](http://blog.bigml.com/2013/06/21/clojure-based-machine-learning/)
+  * Learn about functional programming concepts like `lazy-sequences` and `comp` (this is super cool if you're coming from ObjOriented like I did)
   * Learn about threading and asynchronous functions.
-  * There are jobs in Clojure!
+  * You can get a job in Clojure!
   * The ecosystem is filled with **really great tools**, and **very helpful people**. I am seriously amazed.
 
 
@@ -26,13 +26,11 @@ Why learn Clojure?
 
 If you don't care about running clojure locally (yet), there is a REPL (place to type in code and see what happens) [here.](http://www.tryclj.com/)
 
-An awesome list of exercises is found at [4Clojure.](http://www.4clojure.com/problems)
-
-I also found that doing [ Project Euler problems ](https://projecteuler.net/archives) was very beneficial to getting comfortable in Clojure.
+An awesome list of exercises is found at [4Clojure.](http://www.4clojure.com/problems). You just type in what you think should go in the blank, and see if you're right. Test your intuition.
 
 Skip down to [Tips](#tips) if you don't care about a local environment.
 
-#Setting up your local Environment.
+#Setting up your local Environment
 
 You need a few things to started writing Clojure on your computer.
 
@@ -64,12 +62,17 @@ After it boots up the JVM, this will give us a Clojure REPL. Cooooool. Try it ou
 Technically, we already have everything we need to start wrtiing Clojure. But if we are going to define multi-line functions and run them, doing all of this in a REPL can be a pain.
 
 #####Atom
+
 For the [Atom](https://atom.io/) editor, here is a [ cool plugin ](https://atom.io/packages/proto-repl). You need to be inside of your leiningen directory for this plugin to work.
 
+`cmd + alt + L` splits the Atom window, and gives you a REPL on one half
+`cmd + alt + B` while the cursor is inside of a clojure expression evaluates that function inside the REPL! 
+
 #####VIM
+
 For VIM users, grab TPope's [fireplace](https://github.com/tpope/vim-fireplace). You need to be inside of your leiningen directory with a REPL running in the command line for this to work.
 
-
+`cpp` while the cursor is inside of a clojure expression evaluates that function inside a REPL! You'll see the output at the very botto of the window.
 
 #Tips
 
