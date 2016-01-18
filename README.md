@@ -42,7 +42,7 @@ You need a few things to started writing Clojure on your computer.
 
 Clojure compiles into Java and runs on the JVM. So we need Java.
 
-Run `java -version` in your terminal. If you have version `1.6` or later, youre fine! If not, go [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and get the newest version.
+Run `java -version` in your terminal. If you have version `1.6` or later, your'e fine! If not, go [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and get the newest version.
 
 ###Leiningen
 
@@ -59,7 +59,7 @@ After it boots up the JVM, this will give us a Clojure REPL. Cooooool. Try it ou
 
 ###Editor
 
-Technically, we already have everything we need to start wrtiing Clojure. But if we are going to define multi-line functions and run them, doing all of this in a REPL can be a pain.
+Technically, we already have everything we need to start writing Clojure. But if we are going to define multi-line functions and run them, doing all of this in a REPL can be a pain.
 
 #####Atom
 
@@ -70,9 +70,9 @@ For the [Atom](https://atom.io/) editor, here is a [ cool plugin ](https://atom.
 
 #####VIM
 
-For VIM users, grab TPope's [fireplace](https://github.com/tpope/vim-fireplace). You need to be inside of your leiningen directory with a REPL running in the command line for this to work.
+For VIM users, grab TPope's [fireplace](https://github.com/tpope/vim-fireplace). You need to be inside of your leiningen directory with a REPL running in a command line window for this to work.
 
-`cpp` while the cursor is inside of a clojure expression evaluates that function inside a REPL! You'll see the output at the very botto of the window.
+`cpp` while the cursor is inside of a clojure expression evaluates that function inside a REPL! You'll see the output at the very bottom of the window.
 
 #Tips
 
@@ -155,7 +155,7 @@ What if we want to map over our collection and do something really cool? Like ad
 
 We can define our own function! We use `defn` to do this.
 
-Our funciton would look like this:
+Our function would look like this:
     (defn my-special-function [element] (* 2 (+ 2 element)))
 
 We put the arguments that the function takes in brackets " [] ". This function takes one argument, an 'element'. If we wanted it to take two arguments, we could write 
@@ -177,9 +177,11 @@ Lets take a look at something a bit more advanced. From [ Project Euler ](https:
     The square of the sum of the first ten natural numbers is,
 
     (1 + 2 + ... + 10)2 = 552 = 3025
-    Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+    Hence the difference between the sum of the squares of the first ten
+    natural numbers and the square of the sum is 3025 − 385 = 2640.
 
-    Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+    Find the difference between the sum of the squares of the first one 
+    hundred natural numbers and the square of the sum.
 
 ...
 
@@ -189,7 +191,7 @@ Ok. How do we approach this? By breaking the problem down into smaller pieces!
   * Finding the sum of squares of a collection
   * Finding the square of sums of a collection
 
-And even smaller
+**And even smaller**
 
   * Finding the square of one number
   * Applying that to every element in a collection
@@ -220,7 +222,7 @@ We've already done this a few times.
 
     (reduce + coll)
 
-####Finding the square of one number
+####Finding the square of that one number
 We've already done this too!
 
     (square (reduce + coll))
@@ -235,7 +237,7 @@ Now, our **sum of squares** applied to ten numbers looks like:
 
     (sum-squares [1 2 3 4 5 6 7 8 9 10])
 
-Or even smipler
+Or even simpler
 
     (sum-squares (range 1 11))
 
