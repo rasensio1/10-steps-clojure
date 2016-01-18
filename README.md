@@ -252,7 +252,30 @@ Then, to call it...
     (difference (range 1 11))
 
 Boom. You did it!
-    
+
+
+#Additional Resources
+
+Having mostly been teaching myself, the two best resources have been
+
+  * [ Living Clojure ](http://shop.oreilly.com/product/0636920034292.do)
+  * Stack Overflow
+
+Living Clojure, I prefer over Clojure for the Brave and True because I feel it is more succinct.
+
+#Another fun path
+
+Did you know there is a version of Clojure that compiles into Javascript? It's called [Clojurescript](https://github.com/clojure/clojurescript).
+
+This means that you can make web apps in Clojure! There are even libraries that let you use ReactJS style components.
+
+I built [ Snake ](https://github.com/rasensio1/gametime) using Clojurescript and [explained the process here.](http://rasensio.svbtle.com/beginners-guide-to-an-app-in-clojure)
+
+#Final Thoughts
+
+I'm excited for the future of Clojure. It seems like it is being used more and more in the professional world, something that the LISP community was previously lacking.
+
+Happy coding!
 
 #License
 MIT
