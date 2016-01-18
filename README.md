@@ -158,11 +158,102 @@ We can define our own function! We use `defn` to do this.
 Our funciton would look like this:
     (defn my-special-function [element] (* 2 (+ 2 element)))
 
-And we could apply it this way:
+We put the arguments that the function takes in brackets " [] ". This function takes one argument, an 'element'. If we wanted it to take two arguments, we could write 
+
+    (defn some-func [elem1 elem2])
+
+We can apply our function this way:
     
     (map my-special-function my-vector)
+    > [8 10 12 14]
+
+#More advanced examples
+
+Lets take a look at something a bit more advanced. From [ Project Euler ](https://projecteuler.net/problem=6)...
+
+    Sum of the squares of the first ten natural numbers is,
+
+    12 + 22 + ... + 102 = 385
+    The square of the sum of the first ten natural numbers is,
+
+    (1 + 2 + ... + 10)2 = 552 = 3025
+    Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+
+    Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+...
+
+
+Ok. How do we approach this? By breaking the problem down into smaller pieces!
+
+  * Finding the sum of squares of a collection
+  * Finding the square of sums of a collection
+
+And even smaller
+
+  * Finding the square of one number
+  * Applying that to every element in a collection
+  * Summing up a collection of those numbers
+
+  * Summing up a collection of numbers
+  * Finding the square of that number
+
+
+####Square of one number
+
+    (defn square [num] (* num num))
+
+
+####Applying 'square' to a collection
+Where 'coll' is collection of numbers like [1 2 3 4]
+  
+    (map square coll)
+
+####Summing up the squares
+
+    (defn sum-squares [coll] (reduce + (map square coll)))
+
+So now, we can find the sum of squares!
+
+####Summing up a collection of numbers
+We've already done this a few times.
+
+    (reduce + coll)
+
+####Finding the square of one number
+We've already done this too!
+
+    (square (reduce + coll))
+
+Let's put that in a function.
+
+    (defn square-sums [coll] (square (reduce + coll)))
+
+####Wrapping it up...
+
+Now, our **sum of squares** applied to ten numbers looks like:
+
+    (sum-squares [1 2 3 4 5 6 7 8 9 10])
+
+Or even smipler
+
+    (sum-squares (range 1 11))
+
+Our **square of sums** applied to ten numbers looks like:
+
+    (square-sums (range 1 11))
+
+The difference could be put in a function like so:
+  
+    (defn difference [coll] (- (square-sums coll) (sum-squares coll)))
+
+Then, to call it...
+
+    (difference (range 1 11))
+
+Boom. You did it!
     
 
-## License
+#License
 MIT
 
