@@ -36,7 +36,7 @@ You need a few things to started writing Clojure on your computer.
 
   1. Java
   2. Leiningen
-  3. An editor with a built-in REPL (not necessary, but developing way better)
+  3. An editor with a built-in REPL (not necessary, but makes developing way better)
 
 ###Java
 
