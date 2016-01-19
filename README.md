@@ -14,7 +14,7 @@ Why learn Clojure?
 
   * It's a LISP! Be the diamond in the rough of programmers who understand how these work.
   * Smart people respect LISPs! [like this guy](http://www.paulgraham.com/avg.html) [and this one](http://blog.bigml.com/2013/06/21/clojure-based-machine-learning/)
-  * Learn about functional programming concepts like `lazy-sequences`, `comp`, and `partial` (this is super cool if you're coming from ObjOriented like I did)
+  * Learn about functional programming concepts like `lazy-sequences`, `comp`, and `partial` (this is super cool if you're coming from ObjOriented)
   * Learn about threading and asynchronous functions.
   * You can get a job in Clojure!
   * The ecosystem is filled with **really great tools**, and **very helpful people**. I am seriously amazed.
